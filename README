@@ -1,3 +1,48 @@
 ABOUT
 -----
 This project is a Ruby gem to manage ISO 3166 country names and their corresponding alpha-2 and alpha-3 codes.
+
+TEST
+----
+Tests can be executed by running:
+
+rake test
+
+SAMPLE USAGE
+------------
+To translate from a country's name to their ISO Alpha-2 code:
+
+SunDawg::CountryIsoTranslater.translate_iso3166_name_to_alpha2("United States")
+
+To translate from a country's name to their ISO Alpha-3 code:
+
+SunDawg::CountryIsoTranslater.translate_iso3166_name_to_alpha3("Egypt")
+
+To translate from a country's ISO Alpha-2 code to country name:
+
+SunDawg::CountryIsoTranslater.translate_iso3166_alpha2_to_name("US")
+
+To translate form a country's ISO Alpha-3 code to country name:
+
+SunDawg::CountryIsoTranslater.translate_iso3166_alpha3_to_name("ESP")
+
+DATA
+----
+All country code and names are stored in a countries.yml file that can be changed as you need. The latest codes and country names are derived from:
+
+http://en.wikipedia.org/wiki/ISO_3166-1
+
+GEM INSTALL
+-----------
+This gem is hosted gemcutter.org. To install the gem, you should install gemcutter as so:
+
+sudo gem install gemcutter
+gem tumble
+
+This will add gemcutter to your gem repository for downloading the country_codes gem.
+
+RAILS INSTALL
+-------------
+To include this gem in your Rails project, add the following to your config/environment.rb:
+
+config.gem 'sundawg_country_codes', :lib => 'country_iso_translater'
