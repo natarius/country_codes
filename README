@@ -2,6 +2,15 @@ ABOUT
 -----
 This project is a Ruby gem to manage ISO 3166 country names and their corresponding alpha-2 and alpha-3 codes.
 
+Reference information can be found:
+
+ISO3166 Country Codes
+http://en.wikipedia.org/wiki/ISO_3166-1
+
+ISO4217 Currency Information
+http://www.xe.com/iso4217.php
+http://www.xe.com/symbols.php
+
 TEST
 ----
 Tests can be executed by running:
