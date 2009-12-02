@@ -35,36 +35,44 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
     assert_equal client.translate_standard("China", "name", "alpha2"), "CN"
   end
 
-  def test_get_iso4127_currency_by_iso3166_alpha2
-    currency = client.get_iso4127_currency_by_iso3166_alpha2("US")
+  def test_get_iso4217_currency_by_iso3166_alpha2
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("US")
     assert_equal currency["code"], "USD"
     assert_equal currency["symbol"], "$"
     assert_equal currency["name"], "Dollars"
     assert_equal currency["unicode_hex"], 36
 
-    currency = client.get_iso4127_currency_by_iso3166_alpha2("AF")
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("AF")
     assert_equal currency["code"], "AFN"
     assert_equal currency["symbol"], "؋"
     assert_equal currency["name"], "Afghanis"
     assert_equal currency["unicode_hex"], 1547
 
-    currency = client.get_iso4127_currency_by_iso3166_alpha2("AL")
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("AL")
     assert_equal currency["unicode_hex"].class, Array
     assert_equal currency["unicode_hex"][0], 76
 
-    currency = client.get_iso4127_currency_by_iso3166_alpha2("AT")
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("AT")
     assert_equal currency["code"], "EUR"
   end
 
   def test_data_integrity
     SunDawg::CountryIsoTranslater::COUNTRIES.each_pair { |k, v|
+      # check country codes
       assert_not_nil v["alpha2"]
       assert_not_nil v["alpha3"]
       assert_not_nil v["name"]
+
+      # check currency code and name
       unless v["country_iso4217"].nil?
         assert_not_nil v["country_iso4217"]["code"]
         assert_not_nil v["country_iso4217"]["name"]
       end
+
+      # check to make sure country_iso4217 is spelled correctly
+      v.each_pair { |k2, v2|
+        assert_equal k2, "currency_iso4217" if (k2[0..7] == "currency")
+      }
     }
   end
 

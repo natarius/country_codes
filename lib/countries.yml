@@ -2,7 +2,7 @@ US:
   alpha2: US
   name: United States
   alpha3: USA
-  currency_iso4127: &usd
+  currency_iso4217: &usd
     code: USD
     symbol: $
     name: Dollars
@@ -11,7 +11,7 @@ AF:
   alpha2: AF
   name: Afghanistan
   alpha3: AFG
-  currency_iso4127:    
+  currency_iso4217:    
     code: AFN
     symbol: ؋ 
     name: Afghanis 
@@ -45,7 +45,7 @@ AL:
   alpha2: AL
   name: Albania
   alpha3: ALB
-  currency_iso4127:
+  currency_iso4217:
     code: ALL
     symbol: LEK 
     name: Leke
@@ -54,14 +54,14 @@ DZ:
   alpha2: DZ
   name: Algeria
   alpha3: DZA
-  currency_iso4127:
+  currency_iso4217:
     code: DZD
     name: Dinars
 AD:
   alpha2: AD
   name: Andorra
   alpha3: AND
-  currency_iso4127: &eur
+  currency_iso4217: &eur
     code: EUR
     symbol: €
     name: Euro
@@ -70,14 +70,14 @@ AO:
   alpha2: AO
   name: Angola
   alpha3: AGO
-  currency_4217:
+  currency_iso4217:
     code: AOA
     name: Kwanza
 AR:
   alpha2: AR
   name: Argentina
   alpha3: ARG
-  currency_iso4127:
+  currency_iso4217:
     code: ARS
     symbol: $
     name: Pesos
@@ -93,7 +93,7 @@ AW:
   alpha2: AW
   name: Aruba
   alpha3: ABW
-  currency_iso4127:
+  currency_iso4217:
     code: AWG
     name: Guilders
     alt_name: Florins
@@ -103,7 +103,7 @@ AU:
   alpha2: AU
   name: Australia
   alpha3: AUS
-  currency_iso4127: &aud
+  currency_iso4217: &aud
     code: AUD
     name: Dollars
     symbol: $
@@ -112,7 +112,7 @@ AT:
   alpha2: AT
   name: Austria
   alpha3: AUT
-  currency_iso4127: *eur
+  currency_iso4217: *eur
 AZ:
   alpha2: AZ
   name: Azerbaijan
@@ -239,14 +239,23 @@ IM:
   alpha2: IM
   name: Isle of Man
   alpha3: IMN
+  currency_iso4217:
+    code: IMP
+    name: Pounds
 JE:
   alpha2: JE
   name: Jersey
   alpha3: JEY
+  currency_iso4217:
+    code: JEP
+    name: Pounds
 KP:
   alpha2: KP
   name: Korea, Democratic People's Republic of
   alpha3: PRK
+  currency_iso4217:
+    code: KPW
+    name: Won
 BR:
   alpha2: BR
   name: Brazil
@@ -716,42 +725,70 @@ IL:
   alpha2: IL
   name: Israel
   alpha3: ISR
+  currency_iso4217: 
+    code: ILS
+    name: New Shekels
 IT:
   alpha2: IT
   name: Italy
   alpha3: ITA
+  currency_iso4217: *eur
 JM:
   alpha2: JM
   name: Jamaica
   alpha3: JAM
+  currency_iso4217: 
+    code: JMD
+    name: Dollars
 JP:
   alpha2: JP
   name: Japan
   alpha3: JPN
+  currency_iso4217:
+    code: JPY
+    name: Yen
+    symbol: ¥
+    unicode_hex: 0xa5
 JO:
   alpha2: JO
   name: Jordan
   alpha3: JOR
+  currency_iso4217:
+    code: JOD
+    name: Dinars
 KZ:
   alpha2: KZ
   name: Kazakhstan
   alpha3: KAZ
+  currency_iso4217:
+    code: KZT
+    name: Tenege
 KE:
   alpha2: KE
   name: Kenya
   alpha3: KEN
+  currency_iso4217:
+    code: KES
+    name: Shillings
 KI:
   alpha2: KI
   name: Kiribati
   alpha3: KIR
+  currency_iso4217: *aud
 KW:
   alpha2: KW
   name: Kuwait
   alpha3: KWT
+  currency_iso4217:
+    code: KPW
+    name: Dinars
 KG:
   alpha2: KG
   name: Kyrgyzstan
   alpha3: KGZ
+  currency_iso4217:
+    code: KGS
+    name: Soms
 MO:
   alpha2: MO
   name: Macao
@@ -772,6 +809,9 @@ LB:
   alpha2: LB
   name: Lebanon
   alpha3: LBN
+  currency_iso4217:
+    code: LBP
+    name: Pounds
 LR: 
   alpha2: LR
   name: Liberia
@@ -780,6 +820,9 @@ LV:
   alpha2: LV
   name: Latvia
   alpha3: LVA
+  currency_iso4217:
+    code: LVL
+    name: Lati
 LS:
   alpha2: LS
   name: Lesotho
@@ -1077,6 +1120,11 @@ KR:
   alpha2: KR
   name: Korea, Republic of 
   alpha3: KOR
+  currency_iso4217:
+    code: KRW
+    name: Won
+    symbol: ₩
+    unicode_hex: 0x20a9
 ES:
   alpha2: ES
   name: Spain
@@ -1109,6 +1157,7 @@ SJ:
   alpha2: SJ
   name: Svalbard and Jan Mayen
   alpha3: SJM
+  currency_iso4217: *nok
 SY:
   alpha2: SY
   name: Syrian Arab Republic
