@@ -54,6 +54,9 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
 
     currency = client.get_iso4217_currency_by_iso3166_alpha2("AT")
     assert_equal currency["code"], "EUR"
+
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("NZ")
+    assert_equal currency["code"], "NZD"
   end
 
   def test_data_integrity
@@ -67,13 +70,37 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
       unless v["country_iso4217"].nil?
         assert_not_nil v["country_iso4217"]["code"]
         assert_not_nil v["country_iso4217"]["name"]
+        unless v["country_iso4217"]["alt_currency"].nil?
+          assert_not_nil v["country_iso4217"]["alt_currency"]["code"]
+          assert_not_nil v["country_iso4217"]["alt_currency"]["name"]
+        end
       end
 
       # check to make sure country_iso4217 is spelled correctly
       v.each_pair { |k2, v2|
-        assert_equal k2, "currency_iso4217" if (k2[0..7] == "currency")
+        assert_equal k2, "currency_iso4217" if (k2[0..1] == "c")
       }
     }
+  end
+
+  def test_error_on_invalid_currency
+    begin
+      client.get_iso4217_currency_by_iso3166_alpha2("XX")
+      fail "Expected client::NoCountryError"
+    rescue client::NoCountryError => e
+      assert_equal e.to_s, "[XX] IS NOT VALID"
+    rescue => e
+      fail "Expected client::NoCountryError"
+    end
+
+    begin
+      client.get_iso4217_currency_by_iso3166_alpha2("AX")
+      fail "Expected client::NoCurrencyError"
+    rescue client::NoCurrencyError => e
+      assert_equal e.to_s, "[AX] HAS NO ISO4217 CURRENCY"
+    rescue => e
+      fail "Expected client::NoCurrencyError"
+    end
   end
 
   def test_error_on_invalid_country

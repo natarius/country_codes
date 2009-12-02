@@ -26,6 +26,16 @@ To translate form a country's ISO Alpha-3 code to country name:
 
 SunDawg::CountryIsoTranslater.translate_iso3166_alpha3_to_name("ESP")
 
+To obtain currency information for a country:
+
+currency = SunDawg::CountryIsoTranslater.get_iso4217_currency_by_iso3166_alpha2("US")
+assert_equal currency["code"], "USD"
+assert_equal currency["symbol"], "$"
+assert_equal currency["name"], "Dollars"
+assert_equal currency["unicode_hex"], 36
+
+NOTE: Not all countries have currency information and not all currency information contains both the symbol. Some currency information contain a second currency under the curreny["alt_currency"] which will then contain the same hash values for a currency.
+
 DATA
 ----
 All country code and names are stored in a countries.yml file that can be changed as you need. The latest codes and country names are derived from:
@@ -46,3 +56,12 @@ RAILS INSTALL
 To include this gem in your Rails project, add the following to your config/environment.rb:
 
 config.gem 'sundawg_country_codes', :lib => 'country_iso_translater'
+
+VERSION HISTORY
+---------------
+v0.0.2 - Added ISO 4217 currency information
+v0.0.1 - Allows basic ISO 3166 translation
+
+TO DO
+-----
+1) Add all currency symbols and hex to yaml.

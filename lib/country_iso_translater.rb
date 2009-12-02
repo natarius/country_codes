@@ -46,10 +46,15 @@ module SunDawg
     # O(1) find for iso 4217 currency information
     def self.get_iso4217_currency_by_iso3166_alpha2(code)
       country = COUNTRIES[code]
+      raise NoCountryError.new("[#{code}] IS NOT VALID") if country.nil?
+      raise NoCurrencyError.new("[#{code}] HAS NO ISO4217 CURRENCY") if country["currency_iso4217"].nil?
       country["currency_iso4217"]
     end
 
     class NoCountryError < StandardError
+    end
+
+    class NoCurrencyError < StandardError
     end
   end
 end
