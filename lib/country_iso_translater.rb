@@ -43,6 +43,12 @@ module SunDawg
       country["name"]  
     end
 
+    # O(1) find for iso 4217 currency information
+    def self.get_iso4127_currency_by_iso3166_alpha2(code)
+      country = COUNTRIES[code]
+      country["currency_iso4127"]
+    end
+
     class NoCountryError < StandardError
     end
   end
