@@ -50,6 +50,18 @@ module SunDawg
       raise NoCurrencyError.new("[#{code}] HAS NO ISO4217 CURRENCY") if country["currency_iso4217"].nil?
       country["currency_iso4217"]
     end
+  
+    def self.build_html_unicode(unicode_hex)
+      s = ""
+      if unicode_hex.class == Fixnum
+        s = "&#x#{unicode_hex.to_s(16)}"
+      elsif unicode_hex.class == Array
+        unicode_hex.each { |i|
+          s += "&#x#{i.to_s(16)}"
+        }
+      end 
+      s
+    end
 
     class NoCountryError < StandardError
     end

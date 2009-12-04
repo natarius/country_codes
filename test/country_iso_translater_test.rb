@@ -41,6 +41,7 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
     assert_equal currency["symbol"], "$"
     assert_equal currency["name"], "Dollars"
     assert_equal currency["unicode_hex"], 36
+    assert_equal currency["unicode_hex"].to_s(16), "24"
 
     currency = client.get_iso4217_currency_by_iso3166_alpha2("AF")
     assert_equal currency["code"], "AFN"
@@ -67,16 +68,21 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
       assert_not_nil v["name"]
 
       # check currency code and name
-      unless v["country_iso4217"].nil?
-        assert_not_nil v["country_iso4217"]["code"]
-        assert_not_nil v["country_iso4217"]["name"]
-        unless v["country_iso4217"]["alt_currency"].nil?
-          assert_not_nil v["country_iso4217"]["alt_currency"]["code"]
-          assert_not_nil v["country_iso4217"]["alt_currency"]["name"]
+      unless v["currency_iso4217"].nil?
+        assert_not_nil v["currency_iso4217"]["code"]
+        assert_not_nil v["currency_iso4217"]["name"]
+        unless v["currency_iso4217"]["alt_currency"].nil?
+          assert_not_nil v["currency_iso4217"]["alt_currency"]["code"]
+          assert_not_nil v["currency_iso4217"]["alt_currency"]["name"]
+        end
+
+        # if symbol is present, make sure unicode_hex is present
+        unless v["currency_iso4217"]["symbol"].nil?
+          assert_not_nil v["currency_iso4217"]["unicode_hex"]
         end
       end
 
-      # check to make sure country_iso4217 is spelled correctly
+      # check to make sure currency_iso4217 is spelled correctly
       v.each_pair { |k2, v2|
         assert_equal k2, "currency_iso4217" if (k2[0..1] == "c")
       }
@@ -123,6 +129,15 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
     rescue => e
       fail "Expected client::NoCountryError"
     end
+  end
+
+  def test_build_html_unicode
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("US")    
+    assert_equal client.build_html_unicode(currency["unicode_hex"]), "&#x24"
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("TH")    
+    assert_equal client.build_html_unicode(currency["unicode_hex"]), "&#xe3f"
+    currency = client.get_iso4217_currency_by_iso3166_alpha2("UZ")
+    assert_equal client.build_html_unicode(currency["unicode_hex"]), "&#x43b&#x432"
   end
 
   protected

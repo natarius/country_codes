@@ -43,7 +43,26 @@ assert_equal currency["symbol"], "$"
 assert_equal currency["name"], "Dollars"
 assert_equal currency["unicode_hex"], 36
 
-NOTE: Not all countries have currency information and not all currency information contains both the symbol. Some currency information contain a second currency under the curreny["alt_currency"] which will then contain the same hash values for a currency.
+NOTE: 
+
+Not all countries have currency information and not all currency information contains both the symbol. Some currency information contain a second currency under the curreny["alt_currency"] which will then contain the same hash values for a currency.
+
+Furthermore, while the hex value for representing the unicode symbol is stored in the .yml file, the import into Ruby is converting it into decimal. You can convert back to hex as so:
+
+assert_equal currency["unicode_hex"].to_s(16), "24"
+
+The unicode value, either in base 10 or base 16  will allow you to render the symbol properly in HTML:
+
+&#36; or &#x24;
+
+More information:
+
+http://www.fileformat.info/info/unicode/char/0024/index.htm
+
+To build the unicode HTML for a symbol:
+
+currency = SunDawg::CountryIsoTranslater.get_iso4217_currency_by_iso3166_alpha2("UZ")
+assert_equal SunDawg::CountryIsoTranslater.build_html_unicode(currency["unicode_hex"]), "&#x43b&#x432"
 
 DATA
 ----
@@ -68,9 +87,6 @@ config.gem 'sundawg_country_codes', :lib => 'country_iso_translater'
 
 VERSION HISTORY
 ---------------
-v0.0.2 - Added ISO 4217 currency information
-v0.0.1 - Allows basic ISO 3166 translation
-
-TO DO
------
-1) Add all currency symbols and hex to yaml.
+v0.0.2b - Completed all currency information, unicode HTML utility, and bug fixes. Gem version re-published as 0.0.2.
+v0.0.2 - Added ISO 4217 currency information.
+v0.0.1 - Allows basic ISO 3166 translation.

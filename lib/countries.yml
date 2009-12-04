@@ -7,6 +7,42 @@ US:
     symbol: $
     name: Dollars
     unicode_hex: 0x24 
+NO:
+  alpha2: NO
+  name: Norway
+  alpha3: NOR
+  curreny_iso4217: &nok
+    code: NOK
+    name: Kroner
+    symbol: kr
+    unicode_hex: [0x7b, 0x72]
+NZ:
+  alpha2: NZ
+  name: New Zealand
+  alpha3: NZL
+  currency_iso4217: &nzd
+    code: NZD
+    name: New Zealand Dollars
+    symbol: $
+    unicode_hex: 0x24
+ZA:
+  alpha2: ZA
+  name: South Africa
+  alpha3: ZAF
+  currency_iso4217: &zar
+    code: ZAR
+    name: Rand
+    symbol: R
+    unicode_hex: 0x52
+CH:
+  alpha2: CH
+  name: Switzerland
+  alpha3: CHE
+  currency_iso4217: &chf
+    code: CHF
+    name: Switzerland Francs
+    symbol: CHF
+    unicode_hex: [0x43, 0x48, 0x46]
 AF:
   alpha2: AF
   name: Afghanistan
@@ -472,7 +508,7 @@ DK:
   alpha2: DK
   name: Denmark
   alpha3: DNK
-  currency_iso4217:
+  currency_iso4217: &dkk
     code: DKK
     name: Kroner
     symbol: kr
@@ -584,6 +620,8 @@ NG:
   currency_iso4217:
     code: NGN
     name: Nairas
+    symbol: ₦
+    unicode_hex: 0x20a6
 MP:
   alpha2: MP
   name: Northern Mariana Islands
@@ -596,6 +634,8 @@ PK:
   currency_iso4217:
     code: PKR
     name: Rupees
+    symbol: ₨
+    unicode_hex: 0x20a8
 PS:
   alpha2: PS
   name: Palestinian Territory, Occupied 
@@ -607,6 +647,8 @@ PY:
   currency_iso4217:
     code: PYG
     name: Guarani
+    symbol: Gs
+    unicode_hex: [0x47, 0x73]
 FJ:
   alpha2: FJ
   name: Fiji
@@ -870,7 +912,7 @@ KW:
   name: Kuwait
   alpha3: KWT
   currency_iso4217:
-    code: KPW
+    code: KWD
     name: Dinars
 KG:
   alpha2: KG
@@ -889,10 +931,20 @@ MK:
   alpha2: MK
   name: Macedonia
   alpha3: MKD
+  currency_iso4127:
+    code: MKD
+    name: Denars
+    symbol: ден
+    unicode_hex: [0x434, 0x435, 0x43d]
 LA:
   alpha2: LA
   name: Lao People's Democratic Republic 
   alpha3: LAO
+  currency_iso4217:
+    code: LAK
+    name: Kips
+    symbol: ₭
+    unicode_hex: 0x20ad
 LY:
   alpha2: LY
   name: Libyan Arab Jamahiriya
@@ -907,6 +959,8 @@ LB:
   currency_iso4217:
     code: LBP
     name: Pounds
+    symbol: £
+    unicode_hex: 0xa3
 LR: 
   alpha2: LR
   name: Liberia
@@ -914,6 +968,8 @@ LR:
   currency_iso4217:
     code: LRD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
 LV:
   alpha2: LV
   name: Latvia
@@ -921,6 +977,8 @@ LV:
   currency_iso4217:
     code: LVL
     name: Lati
+    symbol: Ls
+    unicode_hex: [0x4c, 0x73]
 LS:
   alpha2: LS
   name: Lesotho
@@ -941,6 +999,8 @@ LT:
   currency_iso4217:
     code: LTL
     name: Litai
+    symbol: Lt
+    unicode_hex: [0x4c, 0x74]
 LU:
   alpha2: LU
   name: Luxembourg
@@ -964,6 +1024,8 @@ MY:
   currency_iso4217:
     code: MYR
     name: Ringgits
+    symbol: RM
+    unicode_hex: [0x52, 0x4d]
 MV:
   alpha2: MV
   name: Maldives
@@ -1010,6 +1072,8 @@ MU:
   currency_iso4217:
     code: MUR
     name: Rupees
+    symbol: ₨
+    unicode_hex: 0x20a8
 YT:
   alpha2: YT
   name: Mayotte
@@ -1022,6 +1086,8 @@ MX:
   currency_iso4217:
     code: MXN
     name: Pesos 
+    symbol: $
+    unicode_hex: 0x24
 MN:
   alpha2: MN
   name: Mongolia
@@ -1029,6 +1095,8 @@ MN:
   currency_iso4217:
     code: MNT
     name: Tugriks
+    symbol: ₮
+    unicode_hex: 0x20ae
 MS:
   alpha2: MS
   name: Montserrat
@@ -1048,6 +1116,8 @@ MZ:
   currency_iso4217:
     code: MZN
     name: Meticals
+    symbol: MT
+    unicode_hex: [0x4d, 0x54]
 NA:
   alpha2: NA
   name: Namibia
@@ -1055,6 +1125,8 @@ NA:
   currency_iso4217:
     code: NAD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
     alt_currency: *zar
 NR:
   alpha2: NR
@@ -1068,6 +1140,8 @@ NP:
   currency_iso4217:
     code: NPR
     name: Rupees
+    symbol: ₨
+    unicode_hex: 0x20a8
 NL:
   alpha2: NL
   name: Netherlands
@@ -1080,6 +1154,8 @@ AN:
   currency_iso4217:
    code: ANG
    name: Guilders 
+   symbol: ƒ
+   unicode_hex: 0x192
 NC:
   alpha2: NC
   name: New Caledonia
@@ -1087,13 +1163,6 @@ NC:
   currency_iso4217:
     code: XPF
     name: Comptoirs Français du Pacifique Francs
-NZ:
-  alpha2: NZ
-  name: New Zealand
-  alpha3: NZL
-  currency_iso4217: &nzd
-    code: NZD
-    name: New Zealand Dollars
 NI:
   alpha2: NI
   name: Nicaragua
@@ -1101,6 +1170,8 @@ NI:
   currency_iso4217:
     code: NIO
     name: Cordobas
+    symbol: C$
+    unicode_hex: [0x43, 0x24]
 NE:
   alpha2: NE
   name: Niger
@@ -1115,13 +1186,6 @@ NF:
   name: Norfolk Island
   alpha3: NFK
   currency_iso4217: *aud
-NO:
-  alpha2: NO
-  name: Norway
-  alpha3: NOR
-  curreny_iso4217: &nok
-    code: NOK
-    name: Kroner
 OM:
   alpha2: OM
   name: Oman
@@ -1129,6 +1193,8 @@ OM:
   currency_iso4217:
     code: OMR
     name: Riais
+    symbol: ﷼
+    unicode_hex: 0xfdfc
 PW:
   alpha2: PW
   name: Palau
@@ -1141,6 +1207,8 @@ PA:
   currency_iso4217:
     code: PAB
     name: Balboa
+    symbol: B/.
+    unicode_hex: [0x42, 0x2f, 0x2e]
     alt_currency: *usd
 PG:
   alpha2: PG
@@ -1156,6 +1224,8 @@ PE:
   currency_iso4217:
     code: PEN
     name: Nuevos Soles
+    symbol: S/.
+    unicode_hex: [0x50,0x2f,0x2e]
 PH:
   alpha2: PH
   name: Philippines
@@ -1163,6 +1233,8 @@ PH:
   currency_iso4217:
     code: PHP
     name: Pesos
+    symbol: Php
+    unicode_hex: [0x50, 0x68, 0x70]
 PN:
   alpha2: PN
   name: Pitcairn
@@ -1180,6 +1252,8 @@ PL:
   currency_iso4217:
     code: PLN
     name: Zlotych
+    symbol: zł
+    unicode_hex: [0x7a, 0x142]
 PT:
   alpha2: PT
   name: Portugal
@@ -1192,6 +1266,8 @@ QA:
   currency_iso4217:
     code: QAR
     name: Rials
+    symbol: ﷼
+    unicode_hex: 0xfdfc
 CG:
   alpha2: CG
   name: Congo 
@@ -1239,6 +1315,8 @@ RO:
   currency_iso4217:
     code: RON
     name: New Lei
+    symbol: lei
+    unicode_hex: [0x6c, 0x65, 0x69]
 RU:
   alpha2: RU
   name: Russian Federation
@@ -1285,6 +1363,11 @@ RS:
   alpha2: RS
   name: Serbia
   alpha3: SRB
+  currency_iso4217:
+    code: RSD
+    name: Dinars
+    symbol: Дин.
+    unicode_hex: [0x414, 0x438, 0x43d, 0x2e]
 GS:
   alpha2: GS
   name: South Georgia and the South Sandwich Islands
@@ -1304,6 +1387,8 @@ SA:
   currency_iso4217:
     code: SAR
     name: Riyals 
+    symbol: ﷼
+    unicode_hex: 0xfdfc
 SN:
   alpha2: SN
   name: Senegal
@@ -1316,6 +1401,8 @@ SC:
   currency_iso4217:
     code: SCR
     name: Rupees
+    symbol: ₨
+    unicode_hex: 0x20a8
 SL:
   alpha2: SL
   name: Sierra Leone
@@ -1330,6 +1417,8 @@ SG:
   currency_iso4217:
     code: SGD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
 SK:
   alpha2: SK
   name: Slovakia
@@ -1347,6 +1436,8 @@ SB:
   currency_iso4217:
     code: SBD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
 SO:
   alpha2: SO
   name: Somalia
@@ -1354,13 +1445,8 @@ SO:
   currency_iso4217:
     code: SOS
     name: Shillings
-ZA:
-  alpha2: ZA
-  name: South Africa
-  alpha3: ZAF
-  currency_iso4217: &zar
-    code: ZAR
-    name: Rand
+    symbol: S
+    unicode_hex: 0x53
 KR:
   alpha2: KR
   name: Korea, Republic of 
@@ -1382,6 +1468,8 @@ LK:
   currency_iso4217:
     code: LKR
     name: Rupees
+    symbol: ₨
+    unicode_hex: 0x20a8
 SH:
   alpha2: SH
   name: Saint Helena
@@ -1389,6 +1477,8 @@ SH:
   currency_iso4217:
     code: SHP
     name: Pounds
+    symbol: £
+    unicode_hex: 0xa3
 KN:
   alpha2: KN
   name: Saint Kitts and Nevis
@@ -1411,6 +1501,8 @@ SR:
   currency_iso4217:
     code: SRD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
 SJ:
   alpha2: SJ
   name: Svalbard and Jan Mayen
@@ -1423,6 +1515,8 @@ SY:
   currency_iso4217:
     code: SYP
     name: Pounds
+    symbol: £
+    unicode_hex: 0xa3
 SZ:
   alpha2: SZ
   name: Swaziland
@@ -1439,15 +1533,6 @@ SE:
     name: Kronor
     symbol: kr
     unicode_hex: [0x6b, 0x72]
-CH:
-  alpha2: CH
-  name: Switzerland
-  alpha3: CHE
-  currency_iso4217: &chf
-    code: CHF
-    name: Switzerland Francs
-    symbol: CHF
-    unicode_hex: [0x43, 0x48, 0x46]
 TW:
   alpha2: TW
   name: Taiwan, Province of China
@@ -1455,6 +1540,8 @@ TW:
   currency_iso4217:
     code: TWD
     name: New Dollars 
+    symbol: NT$
+    unicode_hex: [0x4e, 0x54, 0x24]
 TJ:
   alpha2: TJ
   name: Tajikistan
@@ -1492,6 +1579,8 @@ UZ:
   currency_iso4217:
     code: UZS
     name: Sums
+    symbol: лв
+    unicode_hex: [0x43b, 0x432]
 TH:
   alpha2: TH
   name: Thailand
@@ -1499,6 +1588,8 @@ TH:
   currency_iso4217:
     code: THB
     name: Baht
+    symbol: ฿
+    unicode_hex: 0xe3f
 TG:
   alpha2: TG
   name: Togo
@@ -1518,6 +1609,8 @@ TT:
   currency_iso4217:
     code: TTD
     name: Dollars
+    symbol: $
+    unicode_hex: 0x24
 TN:
   alpha2: TN
   name: Tunisia
@@ -1564,6 +1657,8 @@ UA:
   currency_iso4217:
     code: UAH
     name: Hryvnia
+    symbol: ₴
+    unicode_hex: 0x20b4
 AE:
   alpha2: AE
   name: United Arab Emirates
@@ -1587,6 +1682,8 @@ UY:
   currency_iso4217:
     code: UYU
     name: Pesos
+    symbol: $U
+    unicode_hex: [0x24, 0x55]
 VU:
   alpha2: VU
   name: Vanuatu
@@ -1603,6 +1700,8 @@ VE:
   currency_iso4217: 
     code: VEF
     name: Bolivares Fuertes
+    symbol: Bs
+    unicode_hex: [0x43b, 0x432]
 VN:
   alpha2: VN
   name: Viet Nam
@@ -1629,6 +1728,8 @@ ZW:
   currency_iso4217:
     code: ZWD
     name: Zimbabwe Dollars
+    symbol: Z$
+    unicode_hex: [0x5a, 0x24]
 YE:
   alpha2: YE
   name: Yemen
@@ -1636,6 +1737,8 @@ YE:
   currency_iso4217:
     code: YER
     name: Rials
+    symbol: ﷼
+    unicode_hex: 0xfdfc
 ZM:
   alpha2: ZM
   name: Zambia
