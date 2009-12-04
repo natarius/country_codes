@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher Sun"]
-  s.date = %q{2009-12-02}
+  s.date = %q{2009-12-04}
   s.description = %q{Manage ISO 3166 Country Names and Codes.}
   s.email = %q{christopher.sun@gmail.com}
   s.extra_rdoc_files = ["README", "lib/countries.yml", "lib/country_iso_translater.rb"]
