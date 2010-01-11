@@ -1,6 +1,11 @@
+Manifest
 README
 Rakefile
 lib/countries.yml
 lib/country_iso_translater.rb
+lib/usa_state_translater.rb
+lib/usa_states.yml
+sundawg_country_codes.gemspec
 test/country_iso_translater_test.rb
-Manifest
+test/test_helper.rb
+test/usa_translater_test.rb

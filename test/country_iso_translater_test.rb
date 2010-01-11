@@ -90,44 +90,24 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
   end
 
   def test_error_on_invalid_currency
-    begin
+    assert_raise SunDawg::CountryIsoTranslater::NoCountryError do
       client.get_iso4217_currency_by_iso3166_alpha2("XX")
-      fail "Expected client::NoCountryError"
-    rescue client::NoCountryError => e
-      assert_equal e.to_s, "[XX] IS NOT VALID"
-    rescue => e
-      fail "Expected client::NoCountryError"
     end
 
-    begin
+    assert_raise SunDawg::CountryIsoTranslater::NoCurrencyError do
       client.get_iso4217_currency_by_iso3166_alpha2("AX")
-      fail "Expected client::NoCurrencyError"
-    rescue client::NoCurrencyError => e
-      assert_equal e.to_s, "[AX] HAS NO ISO4217 CURRENCY"
-    rescue => e
-      fail "Expected client::NoCurrencyError"
     end
   end
 
   def test_error_on_invalid_country
-    begin
+    assert_raise SunDawg::CountryIsoTranslater::NoCountryError do
       client.translate_iso3166_name_to_alpha2("Candyland")
-      fail "Expected client::NoCountryError"
-    rescue client::NoCountryError => e
-      assert_equal e.to_s, "[Candyland] IS NOT VALID"
-    rescue => e
-      fail "Expected client::NoCountryError"
     end
   end
 
   def test_error_on_invalid_alpha2
-    begin
+    assert_raise SunDawg::CountryIsoTranslater::NoCountryError do
       client.translate_iso3166_alpha2_to_name("XX")
-      fail "Expected client::NoCountryError"
-    rescue client::NoCountryError => e
-      assert_equal e.to_s, "[XX] IS NOT VALID"
-    rescue => e
-      fail "Expected client::NoCountryError"
     end
   end
 
