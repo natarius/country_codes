@@ -1,0 +1,750 @@
+ab:
+  name: Abkhaz
+  family: Northwest Caucasian
+  alpha3t: abk
+aa:
+  name: Afar
+  family: Afro-Asiatic
+  alpha3t: aar
+af:
+  name: Afrikaans
+  family: Indo-European
+  alpha3t: afr
+ak:
+  name: Akan
+  family: Niger-Congo
+  alpha3t: aka
+sq:
+  name: Albanian
+  family: Indo-European
+  alpha3t: sqi
+am:
+  name: Amharic
+  family: Afro-Asiatic
+  alpha3t: amh
+ar:
+  name: Arabic
+  family: Afro-Asiatic
+  alpha3t: ara
+an:
+  name: Aragonese 
+  family: Indo-European
+  alpha3t: arg
+hy:
+  name: Armenian
+  family: Indo-European
+  alpha3t: hye 
+as:
+  name: Assamese
+  family: Indo-European
+  alpha3t: asm
+av:
+  name: Avaric
+  family: Northeast Caucasian
+  alpha3t: ava
+ae:
+  name: Avestan
+  family: Indo-European
+  alpha3t: ave
+ay:
+  name: Aymara
+  family: Aymaran
+  alpha3t: aym
+az:
+  name: Azerbaijani
+  family: Turkic
+  alpha3t: aze
+bm:
+  name: Bambara
+  family: Niger-Congo
+  alpha3t: bam
+ba:
+  name: Bashkir
+  family: Turkic
+  alpha3t: bak
+eu:
+  name: Baque
+  family: Language Isolate
+  alpha3t: eus
+  alpha3b: baq
+be:
+  name: Belarusian
+  family: Indo-European
+  alpha3t: bel
+bn:
+  name: Bengali 
+  family: Indo-European 
+  alpha3t: ben
+bh:
+  name: Bihari
+  family: Indo-European
+  alpha3t: bih
+bi:
+  name: Bislama
+  family: Creole
+  alpha3t: bis
+bs:
+  name: Bosnian
+  family: Indo-European
+  alpha3t: bos
+br:
+  name: Breton
+  family: Indo-European
+  alpha3t: bre
+bg:
+  name: Bulgarian
+  family: Indo-European
+  alpha3t: bul
+my:
+  name: Burmese
+  family: Sino-Tibetan
+  alpha3t: mya
+  alpha3b: bur
+ca:
+  name: Catalan
+  family: Indo-European
+  alpha3t: cat
+ch:
+  name: Chamorro
+  family: Austronesian
+  alpha3t: cha
+ce:
+  name: Chechen
+  family: Northeast Caucasian
+  alpha3t: che
+ny:
+  name: Chichewa
+  family: Niger-Congo
+  alpha3t: nya
+zh:
+  name: Chinese
+  family: Sino-Tibetan
+  alpha3t: zho
+  alpha3b: chi
+cv:
+  name: Chuvash
+  family: Turkic
+  alpha3t: chv
+kw:
+  name: Cornish
+  family: Indo-European
+  alpha3t: cor
+co:
+  name: Corsican
+  family: Indo-European
+  alpha3t: cos
+cr:
+  name: Cree
+  family: Algonquian
+  alpha3t: cre
+hr:
+  name: Croatian
+  family: Indo-European
+  alpha3t: hrv
+cs:
+  name: Czech
+  family: Indo-European
+  alpha3t: ces
+  alpha3b: cze
+da:
+  name: Danish
+  family: Indo-European
+  alpha3t: dan
+dv:
+  name: Divehi
+  family: Indo-European
+  alpha3t: div
+nl:
+  name: Dutch
+  family: Indo-European
+  alpha3t: nld
+  alpha3b: dut
+dz:
+  name: Dzongkha
+  family: Sino-Tibetan
+  alpha3t: dzo
+en:
+  name: English
+  family: Indo-European
+  alpha3t: eng
+eo:
+  name: Esperanto
+  family: Constructed
+  alpha3t: epo
+et:
+  name: Estonian
+  family: Finno-Ugric
+  alpha3t: est
+ee:
+  name: Ewe
+  family: Niger-Congo
+  alpha3t: ewe
+fo:
+  name: Faroese
+  family: Indo-European
+  alpha3t: fao
+fj:
+  name: Fijian
+  family: Austronesian
+  alpha3t: fij
+fi:
+  name: Finnish
+  family: Finno-Ugric
+  alpha3t: fin
+fr:
+  name: French
+  family: Indo-European
+  alpha3t: fra
+  alpha3b: fre
+ff:
+  name: Fula
+  family: Niger-Congo
+  alpha3t: ful
+gl:
+  name: Galican
+  family: Indo-European
+  alpha3t: glg
+ka:
+  name: Georgian
+  family: South Caucasian
+  alpha3t: kat
+  alpha3b: geo
+de:
+  name: German
+  family: Indo-European
+  alpha3t: deu
+  alpha3b: ger
+el:
+  name: Greek
+  family: Indo-European
+  alpha3t: ell
+  alpha3b: gre
+gn:
+  name: Guarani
+  family: Tupi-Guarani
+  alpha3t: grn
+gu:
+  name: Gujarati
+  family: Indo-European
+  alpha3t: guj
+ht:
+  name: Haitian
+  family: Creole
+  alpha3t: hat
+ha:
+  name: Hausa
+  family: Afro-Asiatic
+  alpha3t: hau
+he:
+  name: Hebrew
+  family: Afro-Asiatic
+  alpha3t: heb
+hz:
+  name: Herero
+  family: Niger-Congo
+  alpha3t: her
+hi:
+  name: Hindi
+  family: Indo-European
+  alpha3t: hin
+ho:
+  name: Hiri Motu
+  family: Austronesian
+  alpha3t: hmo
+hu:
+  name: Hungarian
+  family: Finno-Ugric
+  alpha3t: hun
+ia:
+  name: Interlingua
+  family: Constructed
+  alpha3t: ina
+id:
+  name: Indonesian
+  family: Austronesian
+  alpha3t: ind
+ie:
+  name: Interlingue
+  family: Constructed
+  alpha3t: ile
+ga:
+  name: Irish
+  family: Indo-European
+  alpha3t: gle
+ig:
+  name: Igbo
+  family: Niger-Congo
+  alpha3t: ibo
+ik:
+  name: Inupiaq
+  family: Eskimo-Aleut
+  alpha3t: ipk
+io:
+  name: Ido
+  family: Constructed
+  alpha3t: ido
+is:
+  name: Icelandic
+  family: Indo-European
+  alpha3t: isl
+  alpha3b: ice
+it:
+  name: Italian
+  family: Indo-European
+  alpha3t: ita
+iu:
+  name: Inuktitut
+  family: Eskimo-Aleut
+  alpha3t: iku
+ja:
+  name: Japanese
+  family: Japonic
+  alpha3t: jpn
+jv:
+  name: Javanese
+  family: Austronesian
+  alpha3t: jav
+kl:
+  name: Kalaallisut
+  family: Eskimo-Aleut
+  alpha3t: kal
+kn:
+  name: Kannada
+  family: Dravidian
+  alpha3t: kan
+kr:
+  name: Kanuri
+  family: Nilo-Saharan
+  alpha3t: kau
+ks:
+  name: Kashmiri
+  family: Indo-European
+  alpha3t: kas
+kk:
+  name: Kazakh
+  family: Turkic
+  alpha3t: kaz
+km:
+  name: Khmer
+  family: Austro-Asiatic
+  alpha3t: khm
+ki:
+  name: Kikuyu
+  family: Niger-Congo
+  alpha3t: kik
+rw:
+  name: Kinyarwanda
+  family: Niger-Congo
+  alpha3t: kin
+ky:
+  name: Kirghiz
+  family: Turkic
+  alpha3t: kir
+kv:
+  name: Komi
+  family: Finno-Ugric
+  alpha3t: kom
+kg:
+  name: Kongo
+  family: Niger-Congo
+  alpha3t: kon
+ko:
+  name: Korean
+  family: Language Isolate
+  alpha3t: kor
+ku:
+  name: Kurdish
+  family: Indo-European
+  alpha3t: kur
+kj:
+  name: Kwanyama
+  family: Niger-Congo
+  alpha3t: kua
+la:
+  name: Latin
+  family: Indo-European
+  alpha3t: lat
+lb:
+  name: Luxembourgish
+  family: Indo-European
+  alpha3t: ltz
+lg:
+  name: Luganda
+  family: Niger-Congo
+  alpha3t: lug
+li:
+  name: Limburgish
+  family: Indo-European
+  alpha3t: lim
+ln:
+  name: Lingala
+  family: Niger-Congo
+  alpha3t: lin
+lo:
+  name: Lao
+  family: Tai-Kadai
+  alpha3t: lao
+lt:
+  name: Lithuanian
+  family: Indo-European
+  alpha3t: lit
+lu:
+  name: Luba-Katanga
+  family: Niger-Congo
+  alpha3t: lub
+lv:
+  name: Latvian
+  family: Indo-European
+  alpha3t: lav
+gv:
+  name: Manx
+  family: Indo-European
+  alpha3t: glv
+mk:
+  name: Macedonian
+  family: Indo-European
+  alpha3t: mkd
+  alpha3b: mac
+mg:
+  name: Malagasy
+  family: Austronesian
+  alpha3t: mlg
+ms:
+  name: Malay
+  family: Austronesian
+  alpha3t: msa
+  alpha3b: may
+ml:
+  name: Malayalam
+  family: Dravidian
+  alpha3t: mal
+mt:
+  name: Maltese
+  family: Afro-Asiatic
+  alpha3t: mlt
+mi:
+  name: Māori
+  family: Austronesian
+  alpha3t: mri
+  alpha3b: mao
+mr:
+  name: Marathi
+  family: Indo-European
+  alpha3t: mar
+mh:
+  name: Marshallese
+  family: Austronesian
+  alpha3t: mah 
+mn:
+  name: Mongolian
+  family: Mongolic
+  alpha3t: mon
+na:
+  name: Nauru
+  family: Austronesian
+  alpha3t: nau
+nv:
+  name: Navajo
+  family: Dene-Yeniseian
+  alpha3t: nav
+nb:
+  name: Norwegian Bokmål
+  family: Indo-European
+  alpha3t: nob
+nd:
+  name: North Ndebele
+  family: Niger-Congo
+  alpha3t: nde
+ne:
+  name: Nepali
+  family: Indo-European
+  alpha3t: nep
+ng:
+  name: Ndonga
+  family: Niger-Congo
+  alpha3t: ndo
+nn:
+  name: Norwegian Nynorsk
+  family: Indo-European
+  alpha3t: nno
+x_no:
+  name: Norwegian
+  family: Indo-European
+  alpha3t: nor
+ii:
+  name: Nuosu
+  family: Sino-Tibetan
+  alpha3t: iii
+nr:
+  name: South Ndebele
+  family: Niger-Congo
+  alpha3t: nbl
+oc:
+  name: Occitan
+  family: Indo-European
+  alpha3t: oci
+oj:
+  name: Ojibwe
+  family: Algonquian
+  alpha3t: oji
+cu:
+  name: Old Church Slavonic
+  family: Indo-European
+  alpha3t: chu
+om:
+  name: Oromo
+  family: Afro-Asiatic
+  alpha3t: orm
+or:
+  name: Oriya
+  family: Indo-European
+  alpha3t: ori
+os:
+  name: Ossetian
+  family: Indo-European
+  alpha3t: oss
+pa:
+  name: Panjabi
+  family: Indo-European
+  alpha3t: pan
+pi:
+  name: Pāli
+  family: Indo-European
+  alpha3t: pli
+fa:
+  name: Persian
+  family: Indo-European
+  alpha3t: fas
+  alpha3b: per
+pl:
+  name: Polish
+  family: Indo-European
+  alpha3t: pol
+ps:
+  name: Pashto
+  family: Indo-European
+  alpha3t: pus
+pt:
+  name: Portuguese
+  family: Indo-European
+  alpha3t: por
+qu:
+  name: Quechua
+  family: Quechuan
+  alpha3t: que
+rm:
+  name: Romansh
+  family: Indo-European
+  alpha3t: roh
+rn:
+  name: Kirundi
+  family: Niger-Congo
+  alpha3t: run
+ro:
+  name: Romanian
+  family: Indo-European
+  alpha3t: ron
+  alpha3b: rum
+ru:
+  name: Russian
+  family: Indo-European
+  alpha3t: rus
+sa:
+  name: Sanskrit
+  family: Indo-European
+  alpha3t: san
+sc:
+  name: Sardinian
+  family: Indo-European
+  alpha3t: srd
+sd:
+  name: Sindhi
+  family: Indo-European
+  alpha3t: snd
+se:
+  name: Northern Sami
+  family: Finno-Ugric
+  alpha3t: sme
+sm:
+  name: Samoan
+  family: Austronesian
+  alpha3t: smo
+sg:
+  name: Sango
+  family: Creole
+  alpha3t: sag
+sr:
+  name: Serbian
+  family: Indo-European
+  alpha3t: srp
+gd:
+  name: Scottish Gaelic
+  family: Indo-European
+  alpha3t: gla
+sn:
+  name: Shona
+  family: Niger-Congo
+  alpha3t: sna
+si:
+  name: Sinhala
+  family: Indo-European
+  alpha3t: sin
+sk:
+  name: Slovak
+  family: Indo-European
+  alpha3t: slk
+  alpha3b: slo
+sl:
+  name: Slovene
+  family: Indo-European
+  alpha3t: slv
+so:
+  name: Somali
+  family: Afro-Asiatic
+  alpha3t: som
+st:
+  name: Southern Sotho
+  family: Niger-Congo
+  alpha3t: sot
+es:
+  name: Spanish
+  family: Indo-European
+  alpha3t: spa
+su:
+  name: Sundanese
+  family: Indo-European
+  alpha3t: sun
+sw:
+  name: Swahili
+  family: Niger-Congo
+  alpha3t: swa
+ss:
+  name: Swati
+  family: Niger-Congo
+  alpha3t: ssw
+sv:
+  name: Swedish
+  family: Indo-European
+  alpha3t: swe
+ta:
+  name: Tamil
+  family: Dravidian
+  alpha3t: tam
+te:
+  name: Telugu
+  family: Dravidian
+  alpha3t: tel
+tg:
+  name: Tajik
+  family: Indo-European
+  alpha3t: tgk
+th:
+  name: Thai
+  family: Tai-Kadai
+  alpha3t: tha
+ti:
+  name: Tigrinya
+  family: Afro-Asiatic
+  alpha3t: tir
+bo:
+  name: Tibetan Standard
+  family: Sino-Tibetan
+  alpha3t: bod
+  alpha3b: tib
+tk:
+  name: Turkmen
+  family: Turkic
+  alpha3t: tuk
+tl:
+  name: Tagalog
+  family: Austronesian
+  alpha3t: tgl
+tn:
+  name: Tswana
+  family: Niger-Congo
+  alpha3t: tsn
+tn:
+  name: Tonga
+  family: Austronesian
+  alpha3t: ton
+tr:
+  name: Turkish
+  family: Turkic
+  alpha3t: tur
+ts:
+  name: Tsonga
+  family: Niger-Congo
+  alpha3t: tso
+tt:
+  name: Tatar
+  family: Turkic
+  alpha3t: tat
+tw:
+  name: Twi
+  family: Niger-Congo
+  alpha3t: twi
+ty:
+  name: Tahitian
+  family: Austronesian
+  alpha3t: tah
+uh:
+  name: Uighur
+  family: Turkic
+  alpha3t: ukr
+ur:
+  name: Urdu
+  family: Indo-European
+  alpha3t: urd
+uz:
+  name: Uzbek
+  family: Indo-European
+  alpha3t: uzb
+ve:
+  name: Venda
+  family: Niger-Congo
+  alpha3t: ven
+vi:
+  name: Vietnamese
+  family: Austro-Asiatic
+  alpha3t: vie
+vo:
+  name: Volapük
+  family: Constructed
+  alpha3t: vol
+wa:
+  name: Walloon
+  family: Indo-European
+  alpha3t: wln
+cy:
+  name: Welsh
+  family: Indo-European
+  alpha3t: cym
+  alpha3b: wel
+wo:
+  name: Wolof
+  family: Indo-European
+  alpha3t: wol
+fy:
+  name: Western Frisian
+  family: Indo-European
+  alpha3t: fry
+xh:
+  name: Xhosa
+  family: Niger-Congo
+  alpha3t: xho
+yi:
+  name: Yiddish
+  family: Indo-European
+  alpha3t: yid
+yo:
+  name: Yoruba
+  family: Niger-Congo
+  alpha3t: yor
+za:
+  name: Zhuang
+  family: Tai-Kadai
+  alpha3t: zha
+zu:
+  name: Zulu
+  family: Niger-Congo
+  alpha3t: zul

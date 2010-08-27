@@ -8,9 +8,9 @@ module SunDawg
 
     # O(N) translation from state name to 2-digit code
     def self.translate_name_to_code(name)
-      USA_STATES.each_pair { |key, value| 
+      USA_STATES.each_pair do |key, value| 
         return key if value["name"] == name 
-      }
+      end
       raise NoStateError.new("[#{name}] IS NOT VALID")
     end
 

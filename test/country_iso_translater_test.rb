@@ -61,7 +61,7 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
   end
 
   def test_data_integrity
-    SunDawg::CountryIsoTranslater::COUNTRIES.each_pair { |k, v|
+    SunDawg::CountryIsoTranslater::COUNTRIES.each_pair do |k, v|
       # check country codes
       assert_not_nil v["alpha2"]
       assert_not_nil v["alpha3"]
@@ -83,10 +83,10 @@ class CountryIsoTranslaterTest < Test::Unit::TestCase
       end
 
       # check to make sure currency_iso4217 is spelled correctly
-      v.each_pair { |k2, v2|
+      v.each_pair do |k2, v2|
         assert_equal k2, "currency_iso4217" if (k2[0..1] == "c")
-      }
-    }
+      end
+    end 
   end
 
   def test_error_on_invalid_currency

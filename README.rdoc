@@ -1,0 +1,114 @@
+= SunDawg Country Codes
+
+== About
+
+This project is a Ruby gem to manage ISO 3166 country names and their corresponding alpha-2 and alpha-3 codes. Additional support has been added for ISO 4127 currency information and standard conventions for states in the USA (based on the the 3166-2:US code).
+
+Reference information can be found:
+
+ISO 3166 Country Codes
+  
+  http://en.wikipedia.org/wiki/ISO_3166-1
+
+ISO 4217 Currency Information
+
+  http://www.xe.com/iso4217.php
+  http://www.xe.com/symbols.php
+
+ISO 3166-2:US Codes
+
+  http://code.google.com/apis/chart/statecodes.html
+  http://en.wikipedia.org/wiki/ISO_3166-2:US
+
+ISO 639 Languages
+
+  http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+== Testing
+
+Tests can be executed by running:
+
+  rake test
+
+== Code Examples
+
+To translate from a country's name to their ISO Alpha-2 code:
+
+  SunDawg::CountryIsoTranslater.translate_iso3166_name_to_alpha2("United States")
+
+To translate from a country's name to their ISO Alpha-3 code:
+
+  SunDawg::CountryIsoTranslater.translate_iso3166_name_to_alpha3("Egypt")
+
+To translate from a country's ISO Alpha-2 code to country name:
+
+  SunDawg::CountryIsoTranslater.translate_iso3166_alpha2_to_name("US")
+
+To translate form a country's ISO Alpha-3 code to country name:
+
+  SunDawg::CountryIsoTranslater.translate_iso3166_alpha3_to_name("ESP")
+
+To obtain currency information for a country:
+
+  currency = SunDawg::CountryIsoTranslater.get_iso4217_currency_by_iso3166_alpha2("US")
+  assert_equal currency["code"], "USD"
+  assert_equal currency["symbol"], "$"
+  assert_equal currency["name"], "Dollars"
+  assert_equal currency["unicode_hex"], 36
+
+NOTE: 
+
+Not all countries have currency information and not all currency information contains both the symbol. Some currency information contain a second currency under currency["alt_currency"] which will then contain the same hash values for a currency.
+
+Furthermore, while the hex value for representing the unicode symbol is stored in the .yml file, the import into Ruby is converting it into decimal. You can convert back to hex as so:
+
+  assert_equal currency["unicode_hex"].to_s(16), "24"
+
+The unicode value, either in base 10 or base 16 will allow you to render the symbol properly in HTML:
+
+&#36; or &#x24;
+
+More information:
+
+  http://www.fileformat.info/info/unicode/char/0024/index.htm
+
+To build the unicode HTML for a symbol:
+
+  currency = SunDawg::CountryIsoTranslater.get_iso4217_currency_by_iso3166_alpha2("UZ")
+  assert_equal SunDawg::CountryIsoTranslater.build_html_unicode(currency["unicode_hex"]), "&#x43b&#x432"
+
+To translate to and from USA state name and the 2-digit code:
+
+  SunDawg::USAStateTranslater.translate_name_to_code('New York')
+  SunDawg::USAStateTranslater.translate_code_to_name('NY')
+
+To translate ISO-639 languages from alpha 2 code:
+
+  language = SunDawg::LanguageIsoTranslater.get_iso_639_1_translation("en")
+  assert_equal "English", language['name']
+  assert_equal "eng", language['alpha3t']
+
+NOTE: Some languages have an alternate alpha3b code per ISO-639-2/B to indicate the "B" alpha 3 letter code for the language.
+
+== Data Files
+
+All country code and names are stored in a countries.yml file that can be changed as you need. The latest codes and country names are derived from:
+
+  http://en.wikipedia.org/wiki/ISO_3166-1
+
+== Gem Install
+
+This gem is hosted rubygems.org. 
+
+== Rails Install
+
+To include this gem in your Rails project, add the following to your config/environment.rb:
+
+  config.gem 'sundawg_country_codes', :lib => 'country_iso_translater'
+
+== History
+v0.0.4 - Added ISO 639 Language translater, cleaned up documents.
+v0.0.3 - Added USA State translater and cleaned up unit tests.
+v0.0.2b - Completed all currency information, unicode HTML utility, and bug fixes. Gem version re-published as 0.0.2.
+v0.0.2 - Added ISO 4217 currency information.
+v0.0.1 - Allows basic ISO 3166 translation.

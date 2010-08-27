@@ -3,8 +3,8 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('sundawg_country_codes', '0.0.3') do |p|
-  p.description    = "Manage ISO 3166 Country Names and Codes."
+Echoe.new('sundawg_country_codes', '0.0.4') do |p|
+  p.description    = "Manage ISO 3166 Country Names and Codes, ISO 639 Languages, and ISO 4217 Currencies."
   p.url            = "http://github.com/SunDawg/country_codes"
   p.author         = "Christopher Sun"
   p.email          = "christopher.sun@gmail.com"
