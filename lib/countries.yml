@@ -7,8 +7,8 @@ US:
     symbol: $
     name: Dollars
     unicode_hex: 0x24 
-NO:
-  alpha2: NO
+"NO":
+  alpha2: "NO"
   name: Norway
   alpha3: NOR
   curreny_iso4217: &nok
