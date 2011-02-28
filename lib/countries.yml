@@ -11,7 +11,7 @@ US:
   alpha2: "NO"
   name: Norway
   alpha3: NOR
-  curreny_iso4217: &nok
+  currency_iso4217: &nok
     code: NOK
     name: Kroner
     symbol: kr
@@ -1372,7 +1372,7 @@ GS:
   alpha2: GS
   name: South Georgia and the South Sandwich Islands
   alpha3: SGS
-  curreny_iso4217: *gbp
+  currency_iso4217: *gbp
 SD:
   alpha2: SD
   name: Sudan
