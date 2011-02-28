@@ -110,6 +110,7 @@ To include this gem in your Rails project, add the following to your config/envi
 
 == History
 
+* 0.0.6 - Fix for "curreny" misspelling - Thanks Kenn
 * 0.0.5 - Fix for how NOrway is treated - Thanks Y8
 * 0.0.4 - Added ISO 639 Language translater, cleaned up documents.
 * 0.0.3 - Added USA State translater and cleaned up unit tests.
